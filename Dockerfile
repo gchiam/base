@@ -5,7 +5,7 @@ MAINTAINER Gordoon Chiam <gordon.chiam@gmail.com>
 RUN mkdir /root/.ssh && echo > /root/.ssh/authorized_keys
 
 RUN apk update && \
-    apk add bash git openssh rsync
+    apk add bash git openssh rsync openrc
 
 RUN rc-update add sshd && \
     rc-status && \
